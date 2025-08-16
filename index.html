@@ -8,9 +8,17 @@
 </head>
 <body>
 
-  <!-- Navegación -->
+  <!-- Navegación con menú desplegable -->
   <nav>
-    <ul>
+    <!-- Botón que despliega el menú -->
+    <button id="menu-toggle" class="menu-toggle-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Menú desplegable -->
+    <ul id="menu-list" class="menu-list">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#tienda">Tienda</a></li>
@@ -20,15 +28,15 @@
   </nav>
 
   <!-- Encabezado con logo -->
-   <header id="inicio">
+  <header id="inicio">
     <img src="logoJaimport.png" alt="Logo JA Import" class="logo" />
     <h1>JA Import</h1>
     <p>Taller especializado y Tienda de repuestos</p>
     <a href="#tienda" class="btn-primary">Ver Repuestos</a>
     <a href="#contacto" class="btn-secondary">Agendar Servicio</a>
-   </header>
+  </header>
 
-  <!-- Resto del contenido (sin cambios) -->
+  <!-- Servicios del Taller -->
   <section id="servicios">
     <h2 class="section-title">Nuestros Servicios</h2>
     <div class="services">
@@ -59,10 +67,12 @@
     </div>
   </section>
 
+  <!-- Tienda de Repuestos -->
   <section id="tienda" class="store">
     <h2 class="section-title">Tienda de Repuestos</h2>
     <div class="products">
       <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1581094794217-f4f4a3f07e89?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Filtro de aceite">
         <div class="product-info">
           <h3>Filtro de Aceite Premium</h3>
           <p>Compatible con vehículos europeos y japoneses.</p>
@@ -71,6 +81,7 @@
         </div>
       </div>
       <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1590674242850-f93b1d137921?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Batería">
         <div class="product-info">
           <h3>Batería 12V 60Ah</h3>
           <p>Alta duración y arranque en frío garantizado.</p>
@@ -79,14 +90,16 @@
         </div>
       </div>
       <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pastillas de freno">
         <div class="product-info">
           <h3>Pastillas de Freno Delanteras</h3>
-          <p>Juego completo para frenos.</p>
+          <p>Juego completo para frenos de alto rendimiento.</p>
           <p class="price">$65.50</p>
           <a href="#" class="btn">Comprar</a>
         </div>
       </div>
       <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1617038413384-6986c322591e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Llantas">
         <div class="product-info">
           <h3>Llanta 17" Performance</h3>
           <p>Neumático de alto rendimiento para autos deportivos.</p>
@@ -97,6 +110,7 @@
     </div>
   </section>
 
+  <!-- Sobre Nosotros -->
   <section id="nosotros" class="about">
     <h2 class="section-title">Sobre JA Import</h2>
     <p>
@@ -107,6 +121,7 @@
     </p>
   </section>
 
+  <!-- Contacto -->
   <section id="contacto" class="contact">
     <h2 class="section-title">Contáctanos</h2>
     <form action="#" method="POST">
@@ -118,16 +133,19 @@
     </form>
   </section>
 
+  <!-- Pie de página -->
   <footer>
     <p>&copy; 2025 JA Import. Todos los derechos reservados.</p>
     <p>📍 Dirección: Gómez de Fonseca 466, C1114 Cdad. Autónoma de Buenos Aires | 📞 011 3011-4206</p>
-    <p>📧 info@jaimport.com | 🕒 Lunes a Viernes: 9:00 - 18:00 Sabados 9:00 - 14:00 </p>
+    <p>📧 info@jaimport.com | 🕒 Lunes a Viernes: 9:00 - 18:00 | Sábados: 9:00 - 14:00</p>
   </footer>
 
-  <a href="https://wa.me/5559876543?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios%20y%20repuestos%20de%20JA%20Import." class="whatsapp-btn" target="_blank">
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/541130114206?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios%20y%20repuestos%20de%20JA%20Import." class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
