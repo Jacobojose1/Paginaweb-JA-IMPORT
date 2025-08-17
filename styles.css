@@ -414,71 +414,101 @@ footer p {
 
 /* === Responsive: Ajustes para móviles === */
 @media (max-width: 768px) {
+  /* Aseguramos que el header ocupe bien el espacio */
   header {
     height: 85vh;
     gap: 1.2rem;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1rem; /* Reducido para evitar desbordamiento */
+    overflow: hidden; /* Evita desbordamiento si hay algo muy ancho */
   }
 
+  /* Logo: más pequeño pero proporcional */
   .logo {
     width: 80%;
     max-width: 200px;
+    margin-bottom: 0;
   }
 
+  /* Texto: espacio controlado */
   .tagline {
-    margin-top: 2.8rem; /* Puedes ajustar más o menos según necesites */
+    margin-top: 2.5rem;
     font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 0 1rem; /* Evita que toque los bordes */
+    box-sizing: border-box;
   }
 
-
+  /* Botones: tamaño adecuado para dedos */
   header .btn-primary,
   header .btn-secondary {
     font-size: 1.1rem;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.8rem;
+    width: 80%;
+    max-width: 250px;
+    margin: 0.5rem auto;
   }
 
-  /* Mostrar el botón hamburguesa solo en móviles */
+  /* Menú hamburguesa */
   .menu-toggle-icon {
     display: flex;
   }
 
-  /* Ajustar menú desplegable */
+  /* Menú desplegable: centrado y con ancho controlado */
   .menu-list {
     margin: 60px auto 0;
     width: 90%;
     max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
   }
 
   .menu-list a {
     font-size: 1.2rem;
-    padding: 1.2rem 1.5rem;
+    padding: 1.1rem 1.5rem;
   }
 
+  /* Secciones: padding ajustado */
   section {
     padding: 3rem 1rem;
   }
 
   .section-title {
     font-size: 2rem;
+    padding: 0 1rem;
   }
 
   .service-card h3 {
     font-size: 1.2rem;
   }
 
+  /* Tienda: productos responsivos */
   .products {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: 1fr; /* Uno por fila en móvil */
+    gap: 1.5rem;
   }
 
   .product-card img {
-    height: 150px;
+    height: 140px; /* Un poco más pequeño */
   }
 
+  /* Botón de WhatsApp: posición segura */
   .whatsapp-btn {
     width: 50px;
     height: 50px;
     bottom: 20px;
     right: 20px;
     font-size: 24px;
+  }
+
+  /* Asegurar que nada desborde */
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
