@@ -412,8 +412,7 @@ footer p {
   100% { transform: translateY(0px); }
 }
 
-/* === Responsive: Ajustes para móviles === */
-@media (max-width: 865px) {
+@media (max-width: 875px) {
   /* Aseguramos que el header ocupe bien el espacio */
   header {
     height: 85vh;
@@ -424,14 +423,14 @@ footer p {
 
   /* Logo: más pequeño pero proporcional */
   .logo {
-    width: 80%;
+    width: 70%;
     max-width: 200px;
     margin-bottom: 0;
   }
 
   /* Texto: espacio controlado */
   .tagline {
-    margin-top: 2.5rem;
+    margin-top: 4.5rem;
     font-size: 1.3rem;
     line-height: 1.4;
     padding: 0 1rem; /* Evita que toque los bordes */
@@ -512,4 +511,3 @@ footer p {
     box-sizing: border-box;
   }
 }
-
