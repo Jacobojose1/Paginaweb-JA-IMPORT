@@ -424,13 +424,13 @@ footer p {
   /* Logo: más pequeño pero proporcional */
   .logo {
     width: 70%;
-    max-width: 200px;
+    max-width: 180px;
     margin-bottom: 0;
   }
 
   /* Texto: espacio controlado */
   .tagline {
-    margin-top: 4.5rem;
+    margin-top: 5.1rem;
     font-size: 1.3rem;
     line-height: 1.4;
     padding: 0 1rem; /* Evita que toque los bordes */
@@ -511,3 +511,4 @@ footer p {
     box-sizing: border-box;
   }
 }
+
