@@ -17,25 +17,38 @@ header {
   height: 80vh;
   color: #fff;
   text-align: center;
-  padding: 2rem;
   position: relative;
   background: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem; /* Espacio uniforme entre logo, texto y botones */
+  padding: 8rem;
 }
 
 /* Capa oscura sobre fondo */
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+header {
+  height: 80vh;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* espacio base pequeño */
+  padding: 8rem;
+}
+
+/* Aumenta solo el espacio entre el logo y el texto */
+.tagline {
+  margin-top: 5rem; /* ← AQUÍ controlas cuánto más abajo */
+  font-size: 1.6rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  font-weight: 500;
 }
 
 header > * {
@@ -52,7 +65,7 @@ header > * {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   /* 20% más pequeño + bajado 20px */
-  transform: scale(1.5) translateY(20px);
+  transform: scale(2.5) translateY(20px);
   transform-origin: center;
 }
 
@@ -88,19 +101,21 @@ header .btn-secondary {
   color: white;
 }
 
-/* === NUEVO: Menú con botón hamburguesa pequeño === */
+/* === NUEVO: Menú con barra más alta === */
 nav {
   background-color: #1a1a1a;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem 1rem; /* Aumenta el padding vertical (altura) */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+  min-height: 60px; /* Altura mínima para que se vea bien */
 }
 
 /* Botón hamburguesa: cuadradito pequeño con 3 líneas */
@@ -400,21 +415,26 @@ footer p {
 /* === Responsive: Ajustes para móviles === */
 @media (max-width: 768px) {
   header {
-    height: 100vh;
-  }
-
-  header h1 {
-    font-size: 2.8rem;
-  }
-
-  header p {
-    font-size: 1.2rem;
+    height: 85vh;
+    gap: 1.2rem;
+    padding: 3rem 1.5rem;
   }
 
   .logo {
     width: 80%;
-    max-width: 250px;
-    transform: scale(0.7) translateY(15px);
+    max-width: 200px;
+  }
+
+  .tagline {
+    margin-top: 2.8rem; /* Puedes ajustar más o menos según necesites */
+    font-size: 1.3rem;
+  }
+
+
+  header .btn-primary,
+  header .btn-secondary {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
   }
 
   /* Mostrar el botón hamburguesa solo en móviles */
