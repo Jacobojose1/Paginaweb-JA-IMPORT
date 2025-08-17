@@ -45,14 +45,14 @@ header > * {
 
 /* Estilo del logo - 20% más pequeño y un poco más abajo */
 .logo {
-  width: 60%; /* Controla el ancho */
+  width: 90%; /* Controla el ancho */
   max-width: 350px; /* Tamaño máximo */
   height: auto;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   /* 20% más pequeño + bajado 20px */
-  transform: scale(0.8) translateY(20px);
+  transform: scale(1.5) translateY(20px);
   transform-origin: center;
 }
 
